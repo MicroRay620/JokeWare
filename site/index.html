@@ -2,22 +2,87 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
-        <title>JokeWare Test</title>
-        <!--Will be having ExPack used for CSS and JS when it's ready for 1.0.13-->
+        <title>JokeWare</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/expack_library@1.0.15/dist/css/expack.min.css" integrity="sha384-R1b8WPDF7ffG8NO2M/pnreu2oiTQL+peIqGwRHgH2wNt0vB4KK6UGLWdkdfzm+pP" crossorigin="anonymous">
+        <link href="./imgs/funny_icon.png" rel="icon" type="image/png">
+        <style>
+            body {
+                background-color: #000000;
+                color: #ffffff;
+            }
+            a {
+                color: #ffffff;
+            }
+            a.norm-link:hover {
+                font-weight: bold;
+            }
+            button a {
+                font-size: 3em;
+                color: #000000;
+            }
+            .justify-center {
+			    justify-content: center;
+		    }
+            .align-center {
+                display: flex;
+				margin: 0 auto;
+			    justify-content: center;
+            }
+            img:hover {
+                font-style:italic;
+            }
+        </style>
     </head>
-    <body>
-        <h1>JokeWare</h1>
-        <main>
-            <div>
-                <blockquote>
-                    <p>JokeWare is a prank JavaScript NPM package that has a 1/10 (10%) chance of opening a random (<b>SAFE</b>) url.</p>
-                    <span>&mdash; JokeWare GitHub page</span>
+    <body data-font="roboto">
+        <h1 data-font="times-roman" data-display="flex" class="align-center">JokeWare</h1>
+        <div class="align-center" style="height: 50px; width: 50px;">
+            <img src="./imgs/funny_icon.png"/>
+        </div>
+        <main data-display="flex">
+            <article>
+                <blockquote class="justify-center">
+                    <p class="align-center">JokeWare is a prank JavaScript package.</p>
+                    <p class="align-center">All this package does is have a 10% chance of opening a safe link</p>
+                    <span class="align-center">&mdash; JokeWare GitHub page</span>
                 </blockquote>
-                <div id="example">
+                <div class="align-center" style="font-style:italic; font-size: 1.2em;">
+                    <code data-font="georgia">&lt;script src="https://cdn.jsdelivr.net/npm/jokeware@1.0.1/dist/jokeware.min.js"&gt;</code>
+                </div>
+                <div id="example" class="align-center">
                     <p>An example is this: <a href="https://google.com">Google URL</a></p>
                 </div>
-            </div>
+            </article>
+            <section class="align-center">
+                <h3><button><a href="https://en.wikipedia.org/wiki/Troll_(slang)" data-font="comic-sans" style="text-decoration: none;"><i>Take Your Chances</i></a></button></h3>
+            </section>
         </main>
+        <hr/>
+        <footer>
+            <div>
+                <article id="open-source" class="align-center">
+                    <span>This website is an open source project under the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" class="norm-link">GNU General Public License v2.0</a> and the source code can be found on <a href="https://github.com/MicroRay620/JokeWare">GitHub</a></span>
+                </article>
+                <article id="additional">
+                    <div id="libraries">
+                        <span class="align-center">JokeWare uses &nbsp;<a href="https://github.com/TeamExpack/ExPack" class="norm-link">Expack Library</a> &nbsp; and &nbsp; <a href="https://jquery.com/" class="norm-link">jQuery</a></span>
+                        <blockquote class="justify-center align-center">
+                            ExPack is used for CSS and styling
+                            <br>jQuery for better JavaScript.
+                        </blockquote>
+                    </div>
+                    <hr/>
+                    <div id="host" class="align-center" style="color: #d3d3d3;">
+                        <small>This site is powered by <a href="https://cloudflare.com" class="norm-link" style="color: #d3d3d3;">CloudFlare</a></small>
+                    </div>
+                </article>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <script>
+            if ($("a").hasClass("norm-link")) {
+                $("a").attr("target", "_blank");
+            }
+        </script>
         <script src="../dist/jokeware.min.js"></script>
     </body>
 </html>
