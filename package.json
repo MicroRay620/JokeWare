@@ -1,6 +1,6 @@
 {
   "name": "jokeware",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A joke package that randomly opens links from safe sites (like YouTube, Wikipedia, and other sources that are similiar). The name JokeWare is a play on the word 'Maleware'. This package is only for a funny prank and has no malicious intentions behind it.",
   "main": "dist/js/jokeware.min.js",
   "scripts": {
