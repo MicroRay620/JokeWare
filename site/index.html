@@ -13,6 +13,10 @@
             a {
                 color: #ffffff;
             }
+            a.norm-link::before{
+                
+                content:"[safe]";
+            }
             a.norm-link:hover {
                 font-weight: bold;
             }
@@ -38,14 +42,29 @@
         <div class="align-center" style="height: 50px; width: 50px;">
             <img src="./imgs/funny_icon.png"/>
         </div>
+        <aside style="float:left;">
+            <ul>
+                <li><a href="https://google.com">Take</a></li>
+                <li><a href="https://google.com">The</a></li>
+                <li><a href="https://google.com">chance</a></li>
+            </ul>
+        </aside>
         <main data-display="flex">
             <article>
                 <blockquote class="justify-center">
                     <p class="align-center">JokeWare is a prank JavaScript package.</p>
                     <p class="align-center">All this package does is have a 10% chance of opening a link</p>
-                    <p class="align-center"><small>All links are safe and are not virus or phishing links</small></p>
                     <span class="align-center">&mdash; JokeWare GitHub page</span>
                 </blockquote>
+                <article class="justify-center">
+                    <blockquote>
+                        <p class="align-center">When a link has <code>[safe]</code> before it, that means it has no change of the random chance that the other links have.</p>
+                    </blockquote>
+                </article>
+                <div id="disclaimer">
+                    <h3 class="align-center"><i>None of the link are spam, phishing, tracking, or malicious</i></h3>
+                    <span class="align-center">Only links used are YouTube and Wikipedia</span>
+                </div>
                 <div class="align-center" style="font-style:italic; font-size: 1.2em;">
                     <code data-font="georgia">&lt;script src="https://cdn.jsdelivr.net/npm/jokeware@1.0.2/dist/jokeware.min.js"&gt;</code>
                 </div>
@@ -63,6 +82,9 @@
             <div>
                 <article id="open-source" class="align-center">
                     <span>This website is an open source project under the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" class="norm-link">GNU General Public License v2.0</a> and the source code can be found on <a href="https://github.com/MicroRay620/JokeWare">GitHub</a></span>
+                </article>
+                <article id="javascript" class="align-center">
+                    <span>You can find the possible links in the GitHub page <a href="https://github.com/MicroRay620/JokeWare/blob/main/src/index.js" class="norm-link"><code>src/index.js</code></a></span>
                 </article>
                 <article id="additional">
                     <div id="libraries">
