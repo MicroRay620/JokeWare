@@ -48,16 +48,20 @@ function JokeWare() {
         MoreFunny();
     }
     while ($("div").hasClass("word")) {
-        var wordLength = Math.floor(Math.random() * (10 - 2) + 2);
-        let alphabet = [
-            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 
-            'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-        ];
-        var word = '';
-        for (let i = 0; i < wordLength; i++) {
-            let randomIndex = Math.floor(Math.random() * alphabet.length);
-            word += alphabet[randomIndex];
-            alert("Word is " + word);
+        var count = 0;
+        while (count == 0) {
+            var wordLength = Math.floor(Math.random() * (10 - 2) + 2);
+            let alphabet = [
+                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 
+                'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+            ];
+            var word = '';
+            for (let i = 0; i < wordLength; i++) {
+                let randomIndex = Math.floor(Math.random() * alphabet.length);
+                word += alphabet[randomIndex];
+                alert("Word is " + word);
+            }
+            count++;
         }
     }
 }
