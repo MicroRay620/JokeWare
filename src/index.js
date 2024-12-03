@@ -23,7 +23,7 @@ function JokeWare() {
             console.log("Click Chance:"+clickChance);
             $(this).on("click", function(event) {
                 event.stopPropagation();
-                if (clickChance == 1) {
+                if (clickChance == 1 || clickChance >= 8) {
                     $(this).attr({
                         "href": url,
                         "target": "_blank"
