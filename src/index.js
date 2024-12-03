@@ -47,7 +47,7 @@ function JokeWare() {
     if (funnyOption != false) {
         MoreFunny();
     }
-    /*while ($("div").hasClass("word")) {
+    while ($("div").hasClass("word")) {
         var count = 0;
         while (count == 0) {
             var wordLength = Math.floor(Math.random() * (10 - 2) + 2);
@@ -64,6 +64,6 @@ function JokeWare() {
             count++;
         }
         count;
-    }*/
+    }
 }
 JokeWare();
