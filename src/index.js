@@ -2,6 +2,7 @@ import $ from "jquery";
 import { MoreFunny } from "./more_joke";
 function JokeWare() {
     var linkElement = $("a").not(".norm-link");
+    console.log(linkElement);
     if (linkElement) {
         linkElement.each(function() {
             var originalLink = $(this).attr("href") ? $("a").attr("href") : $("button").attr("href");
