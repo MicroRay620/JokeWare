@@ -42,13 +42,14 @@
     </head>
     <body data-font="roboto">
         <header>
+            <button class="theme-change align-center">Change Theme</button>
             <h1 data-font="times-roman" data-display="flex" class="align-center">JokeWare</h1>
             <div class="align-center" style="height: 50px; width: 50px;">
                 <img src="./imgs/funny_icon.png"/>
             </div>
             <br>
-            <nav class="align-center">
-                <a href="https://google.com">Take</a> <a href="https://google.com">The</a> <a href="https://google.com">chance</a>
+            <nav id="nav" class="align-center">
+                <a href="https://google.com">Take</a>&nbsp;<a href="https://google.com">The</a>&nbsp;<a href="https://google.com">chance</a>
             </nav>
         </header>
         <main data-display="flex">
@@ -109,6 +110,31 @@
         <script>
             if ($("a").hasClass("norm-link")) {
                 $("a").attr("target", "_blank");
+            }
+            var themeOption = $("button").hasClass("theme-change");
+            var navChoice = $("nav").attr("id", "nav") ? true : false;
+            console.log("Theme Change: " + themeOption);
+            console.log("Nav: " + navChoice);
+            var lightMode = false;
+            if (themeOption == true) {
+                $(themeOption).on("click", function() {
+                    location.reload(true);
+                    if (lightMode == false) {
+                        lightMode == true;
+                        $("body").css({
+                            "background-color": "#ffffff",
+                            "color": "#000000"
+                        });   
+                    } else {
+                        $("body").css({
+                            "background-color": "#000000",
+                            "color": "#ffffff"
+                        });
+                    }
+                    if (navChoice == true) {
+                        $("nav").css("background-color", "#36393E");
+                    }
+                })
             }
         </script>
     </body>
