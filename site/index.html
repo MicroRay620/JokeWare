@@ -118,14 +118,16 @@
             var lightMode = false;
             if (themeOption == true) {
                 $(themeOption).on("click", function() {
-                    location.reload(true);
+                    console.log("Theme Change Clicked");
                     if (lightMode == false) {
+                        console.log("Light Mode");
                         lightMode == true;
                         $("body").css({
                             "background-color": "#ffffff",
                             "color": "#000000"
                         });   
                     } else {
+                        console.log("Dark Mode");
                         $("body").css({
                             "background-color": "#000000",
                             "color": "#ffffff"
