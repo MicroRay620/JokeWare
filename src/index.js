@@ -24,7 +24,7 @@ function JokeWare() {
                 let urlArray = [
                     "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Never Gonna You Give Up by Rick Astley
                     "https://www.youtube.com/watch?v=3Lr9VuGZgmw", // Doctor Egg Man Pisses On The Moon
-                    "https://www.youtube.com/watch?v=PXqcHi2fkXI", // You've been trolled video
+                    "https://www.youtube.com/watch?v=BsIa_LKojJI", // You've been trolled video
                     "https://www.youtube.com/watch?v=9K2Y-rfUy_4", // Mayonaise on an esculator
                     wikiUrl,
                 ];
